@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: rgb(206, 206, 206);
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  
+  header {
+    z-index: 100;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    background-color: rgb(250, 58, 58);
+    height: 80px;
+    width: auto;
+    margin: 10px;
+  
+    border: 3px solid rgb(250, 58, 58);
+    border-radius: 40px;
+  }
+  
+  header ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 40px;
+    white-space: nowrap;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  ul a:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .menu-icon {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+  }
+  
+  .logo {
+    margin-left: 5%; 
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(245, 245, 245);
+    width: 100%;
+    white-space: nowrap;
+  }
+  .logo:hover a {
+    text-decoration: none;
+  }
+  header label,
+  header input {
+    display: none;
+  }
+  
+  ul {
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  @media screen and (max-width: 1000px){
+    header {
+        display: flex;
+    }
+    header ul {
+        visibility: hidden;
+        display: flex;
+        height: auto;
+    }
+  
+    header label,
+    header input {
+        display: block;
+        position: absolute;
+        margin-left: 85%;
+    }
+    header input {
+        visibility: hidden;
+    }
+    header label:hover {
+        cursor: pointer;
+    }
+    header input:checked ~ ul {
+        position: absolute;
+        display: flex;
+        visibility: visible;
+        z-index: 100;
+  
+        top: 100px;
+        flex-wrap: wrap;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        margin-left: -15px;
+        border-bottom: 3px solid red;
+    }
+    header ul li {
+        width: 100%;
+        margin-top: 30px;
+        border-bottom: 1px solid white;
+        margin-left: 0;
+        margin-right: 70px;
+    }
+    #last-list-item {
+      margin-bottom: 100px;
+    }
+    header ul li a {
+        width: 100%;
+        color:rgb(255, 255, 255);
+    }
+  }
+  
+  
